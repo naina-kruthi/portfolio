@@ -1,0 +1,217 @@
+/* ── HERO ─────────────────────────────────────── */
+.projects-hero {
+  background: linear-gradient(135deg, var(--blush-light) 0%, var(--blush) 100%);
+  padding: 6rem 0 4rem;
+  border-bottom: 1px solid var(--blush-dark);
+}
+
+.projects-hero .section-title em {
+  font-style: italic;
+  color: var(--rose);
+}
+
+.projects-hero__sub {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--mid);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* ── GRID ─────────────────────────────────────── */
+.projects-grid-section { padding: 5rem 0; }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* ── CARD ─────────────────────────────────────── */
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.project-card:hover,
+.project-card--active {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+
+/* Header */
+.project-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid;
+  flex-wrap: wrap;
+}
+
+.project-card__icon {
+  width: 42px; height: 42px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.project-card__category {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  flex: 1;
+}
+
+.project-card__period {
+  font-size: 0.75rem;
+  color: var(--mid);
+}
+
+/* Body */
+.project-card__body {
+  padding: 1.75rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+
+.project-card__org {
+  font-size: 0.78rem;
+  color: var(--mid);
+  margin-bottom: 1rem;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.project-card__tags span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.22rem 0.7rem;
+  border: 1px solid;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+}
+
+.project-card__desc {
+  font-size: 0.88rem;
+  color: var(--mid);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+/* Toggle */
+.project-card__toggle {
+  background: none;
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  width: fit-content;
+  font-family: var(--font-body);
+}
+
+.project-card__toggle:hover {
+  opacity: 0.75;
+}
+
+/* Highlights */
+.project-card__highlights {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  animation: fadeUp 0.3s ease;
+}
+
+.project-card__highlights li {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+/* Footer */
+.project-card__footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--light-gray);
+}
+
+.project-card__footer .btn {
+  background: var(--btn-bg, var(--rose));
+  border-color: var(--btn-bg, var(--rose));
+  color: var(--white);
+  font-size: 0.78rem;
+}
+
+.project-card__footer .btn:hover {
+  background: var(--btn-hover, var(--rose-dark));
+  border-color: var(--btn-hover, var(--rose-dark));
+}
+
+/* ── TECH PILLS ───────────────────────────────── */
+.tech-used {
+  background: var(--charcoal);
+  padding: 4rem 0;
+}
+
+.tech-used .section-label { color: var(--blush); }
+
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.tech-pills span {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--blush-light);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 1.1rem;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.tech-pills span:hover {
+  background: rgba(242,212,212,0.12);
+  border-color: var(--blush);
+}
+
+@media (max-width: 620px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
